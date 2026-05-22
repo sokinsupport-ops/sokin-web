@@ -1,0 +1,258 @@
+/* Sokin — shared styles for landing + policy pages */
+
+:root {
+  --bg: #2F3E46;
+  --surface: #354F52;
+  --stroke: #3C5A5F;
+  --primary: #52796F;
+  --icon: #84A98C;
+  --text: #F2E9DC;
+  --text-muted: rgba(242, 233, 220, 0.65);
+  --text-subtle: rgba(242, 233, 220, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "SF Pro Text",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+a {
+  color: var(--icon);
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+a:hover {
+  color: var(--text);
+}
+
+header.site-header {
+  padding: 18px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+header.site-header .inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header.site-header .brand {
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: -0.2px;
+  color: var(--text);
+}
+header.site-header nav a {
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 22px;
+  color: var(--text-muted);
+}
+header.site-header nav a:hover {
+  color: var(--text);
+}
+
+/* Landing hero */
+.hero {
+  padding: 80px 24px 56px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: -1.2px;
+  line-height: 1.05;
+  margin-bottom: 18px;
+}
+.hero .tagline {
+  font-size: 19px;
+  color: var(--text-muted);
+  max-width: 560px;
+  margin: 0 auto 36px;
+  line-height: 1.45;
+}
+.hero .badges {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.store-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+}
+.store-badge:hover {
+  background: rgba(82, 121, 111, 0.20);
+  border-color: rgba(132, 169, 140, 0.45);
+  color: var(--text);
+  transform: translateY(-1px);
+}
+.store-badge.disabled {
+  opacity: 0.55;
+  cursor: default;
+  pointer-events: none;
+}
+.store-badge .platform {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-subtle);
+  font-weight: 700;
+}
+.store-badge .name {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* Feature blocks */
+.features {
+  padding: 56px 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.feature {
+  padding: 26px 22px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+}
+.feature h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: -0.2px;
+}
+.feature p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Footer */
+footer.site-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 32px 24px 48px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-subtle);
+}
+footer.site-footer .links {
+  margin-bottom: 14px;
+}
+footer.site-footer .links a {
+  margin: 0 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+footer.site-footer .links a:hover {
+  color: var(--text);
+}
+footer.site-footer .email a {
+  color: var(--icon);
+}
+
+/* Policy pages (privacy, terms) */
+.policy {
+  font-size: 15px;
+}
+.policy h1 {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 6px;
+}
+.policy .effective {
+  font-size: 13px;
+  color: var(--text-subtle);
+  margin-bottom: 28px;
+}
+.policy h2 {
+  font-size: 19px;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  letter-spacing: -0.2px;
+}
+.policy h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 18px 0 6px;
+  color: var(--text-muted);
+}
+.policy p {
+  margin-bottom: 12px;
+  color: var(--text);
+}
+.policy ul {
+  margin: 4px 0 14px 22px;
+  color: var(--text);
+}
+.policy ul li {
+  margin-bottom: 4px;
+}
+.policy hr.lang-divider {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  margin: 56px 0 36px;
+}
+.policy a.back {
+  display: inline-block;
+  margin-top: 36px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (max-width: 720px) {
+  .hero {
+    padding: 60px 20px 40px;
+  }
+  .hero h1 {
+    font-size: 40px;
+  }
+  .hero .tagline {
+    font-size: 16px;
+  }
+  .features {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+  .policy h1 {
+    font-size: 26px;
+  }
+  .policy h2 {
+    font-size: 17px;
+  }
+}
