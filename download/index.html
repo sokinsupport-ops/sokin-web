@@ -87,10 +87,9 @@
     }
     .store-badge:hover { transform: translateY(-1px); opacity: 0.88; }
     .store-badge img { display: block; }
-    /* Apple badge is tight; Google "generic" badge has built-in padding —
-       make Google a bit taller so the visible marks match in height. */
-    .badge-ios img { height: 48px; }
-    .badge-android img { height: 56px; }
+    /* Both badges cropped tight → identical display height. */
+    .badge-ios img { height: 50px; }
+    .badge-android img { height: 50px; }
     .store-badge.primary { order: -1; }
 
     footer {
