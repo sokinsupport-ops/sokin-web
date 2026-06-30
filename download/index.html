@@ -78,41 +78,20 @@
     .buttons {
       display: flex;
       flex-direction: column;
-      gap: 13px;
-      width: 100%;
-      max-width: 320px;
-    }
-    .btn {
-      display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 15px 20px;
-      background: rgba(242,233,220,0.06);
-      border: 1px solid rgba(242,233,220,0.14);
-      border-radius: 16px;
-      color: var(--text);
-      text-decoration: none;
-      transition: background .2s ease, border-color .2s ease, transform .2s ease;
-      position: relative;
+      gap: 14px;
     }
-    .btn:hover { background: rgba(132,169,140,0.16); border-color: rgba(132,169,140,0.5); transform: translateY(-1px); }
-    .btn:active { transform: translateY(0); }
-    .btn .label { display: flex; flex-direction: column; line-height: 1.25; align-items: center; gap: 5px; }
-    .btn { padding-top: 14px; padding-bottom: 14px; }
-    .btn .label .small { font-size: 11px; letter-spacing: .5px; text-transform: uppercase; color: var(--text-subtle); font-weight: 600; }
-    .btn .label .big { font-size: 16px; font-weight: 700; }
-
-    .btn.primary { background: var(--primary); border-color: var(--icon); order: -1; }
-    .btn.primary:hover { background: #5e897e; }
-    .btn.primary .label .small { color: rgba(242,233,220,0.78); }
-    .rec {
-      display: none;
-      position: absolute; top: -9px; right: 14px;
-      background: var(--icon); color: #1f2d28;
-      font-size: 10px; font-weight: 800; letter-spacing: .3px;
-      padding: 3px 9px; border-radius: 999px;
+    .store-badge {
+      display: inline-flex;
+      transition: transform .2s ease, opacity .2s ease;
     }
-    .btn.primary .rec { display: inline-block; }
+    .store-badge:hover { transform: translateY(-1px); opacity: 0.88; }
+    .store-badge img { display: block; }
+    /* Apple badge is tight; Google "generic" badge has built-in padding —
+       make Google a bit taller so the visible marks match in height. */
+    .badge-ios img { height: 48px; }
+    .badge-android img { height: 56px; }
+    .store-badge.primary { order: -1; }
 
     footer {
       text-align: center;
@@ -140,14 +119,11 @@
     <p class="cta-line">Ilovani yuklab oling:</p>
 
     <div class="buttons">
-      <a id="btn-ios" class="btn" href="https://apps.apple.com/app/id6761256187" rel="noopener">
-        <span class="rec">Tavsiya</span>
-        <span class="label"><span class="small">App Store</span><span class="big">iPhone</span></span>
+      <a id="btn-ios" class="store-badge badge-ios" href="https://apps.apple.com/app/id6761256187" rel="noopener" aria-label="Download on the App Store">
+        <img src="appstore.svg" alt="Download on the App Store" />
       </a>
-
-      <a id="btn-android" class="btn" href="https://play.google.com/store/apps/details?id=com.sokin.meditation" rel="noopener">
-        <span class="rec">Tavsiya</span>
-        <span class="label"><span class="small">Google Play</span><span class="big">Android</span></span>
+      <a id="btn-android" class="store-badge badge-android" href="https://play.google.com/store/apps/details?id=com.sokin.meditation" rel="noopener" aria-label="Get it on Google Play">
+        <img src="googleplay.png" alt="Get it on Google Play" />
       </a>
     </div>
   </div>
