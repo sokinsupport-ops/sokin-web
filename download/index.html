@@ -14,7 +14,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     :root {
@@ -97,11 +97,10 @@
     }
 
     .wordmark {
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 40px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      margin-bottom: 12px;
+      width: 150px;
+      height: auto;
+      display: block;
+      margin: 0 auto 14px;
     }
     .tagline {
       font-size: 16px;
@@ -171,7 +170,7 @@
     footer .copy { margin-top: 12px; color: var(--text-subtle); }
 
     @media (max-width: 420px) {
-      .wordmark { font-size: 34px; }
+      .wordmark { width: 132px; }
       .badge { width: 150px; height: 150px; }
       .badge::after { width: 138px; height: 138px; }
     }
@@ -184,7 +183,7 @@
       <img src="icon.png" alt="Sokin" />
     </div>
 
-    <div class="wordmark">Sokin.</div>
+    <img class="wordmark" src="logo.png" alt="Sokin" />
     <p class="tagline">
       Meditatsiya, nafas mashqlari va sokin uyqu uchun ilova.<br />
       Ilovani yuklab oling:
@@ -209,8 +208,7 @@
     </div>
 
     <p class="hint">
-      Tugma ochilmasa — havolani Chrome yoki Safari'da oching.<br />
-      If a button doesn't open, open this link in your browser.
+      Tugma ochilmasa — havolani Chrome yoki Safari'da oching.
     </p>
   </div>
 
