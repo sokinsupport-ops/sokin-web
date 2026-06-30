@@ -66,7 +66,13 @@
       color: var(--text-muted);
       max-width: 380px;
       line-height: 1.55;
-      margin-bottom: 38px;
+      margin-bottom: 0;
+    }
+    .cta-line {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin: 26px 0 30px;
     }
 
     .buttons {
@@ -91,7 +97,8 @@
     }
     .btn:hover { background: rgba(132,169,140,0.16); border-color: rgba(132,169,140,0.5); transform: translateY(-1px); }
     .btn:active { transform: translateY(0); }
-    .btn .label { display: flex; flex-direction: column; line-height: 1.2; align-items: center; }
+    .btn .label { display: flex; flex-direction: column; line-height: 1.25; align-items: center; gap: 5px; }
+    .btn { padding-top: 14px; padding-bottom: 14px; }
     .btn .label .small { font-size: 11px; letter-spacing: .5px; text-transform: uppercase; color: var(--text-subtle); font-weight: 600; }
     .btn .label .big { font-size: 16px; font-weight: 700; }
 
@@ -128,9 +135,9 @@
     <img class="logo" src="icon.png" alt="Sokin" />
 
     <p class="tagline">
-      Meditatsiya, nafas mashqlari va sokin uyqu uchun ilova.<br />
-      Ilovani yuklab oling:
+      Meditatsiya, nafas mashqlari va sokin uyqu uchun ilova.
     </p>
+    <p class="cta-line">Ilovani yuklab oling:</p>
 
     <div class="buttons">
       <a id="btn-ios" class="btn" href="https://apps.apple.com/app/id6761256187" rel="noopener">
