@@ -72,7 +72,7 @@
       font-size: 16px;
       font-weight: 700;
       color: var(--icon);
-      margin: 26px 0 30px;
+      margin: 26px 0 14px;
     }
 
     .buttons {
@@ -87,9 +87,9 @@
     }
     .store-badge:hover { transform: translateY(-1px); opacity: 0.88; }
     .store-badge img { display: block; }
-    /* Both badges cropped tight → identical display height. */
-    .badge-ios img { height: 50px; }
-    .badge-android img { height: 50px; }
+    /* Both badges cropped tight → identical display WIDTH so the
+       stacked pair lines up neatly (edges aligned). */
+    .store-badge img { width: 184px; height: auto; }
     .store-badge.primary { order: -1; }
 
     footer {
