@@ -12,6 +12,12 @@
   <meta property="og:type" content="website" />
 
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .badges .store-badge-img { display: inline-flex; transition: transform .2s ease, opacity .2s ease; }
+    .badges .store-badge-img:hover { transform: translateY(-1px); opacity: .88; }
+    .badges .store-badge-img img { display: block; width: 200px; height: auto; }
+    @media (max-width: 720px) { .badges .store-badge-img img { width: 168px; } }
+  </style>
 </head>
 <body>
 
@@ -29,18 +35,15 @@
     <section class="hero">
       <h1>Sokin</h1>
       <p class="tagline">
-        Meditatsiya, nafas mashqlari va sokin uyqu uchun mobil ilova.<br />
-        A meditation app for stress relief, breathing exercises, and better sleep.
+        Sokin — bu stress, xavotir yoki ichki bezovtalik paytida istalgan vaqtda murojaat qilib, hissiy holatingizni yengillashtirish mumkin bo‘lgan ilova.
       </p>
 
       <div class="badges">
-        <a class="store-badge" href="https://apps.apple.com/app/sokin/id6761256187" target="_blank" rel="noopener">
-          <span class="platform">App Store</span>
-          <span class="name">iOS</span>
+        <a class="store-badge-img" href="https://apps.apple.com/app/id6761256187" target="_blank" rel="noopener" aria-label="Download on the App Store">
+          <img src="download/apple.png" alt="Download on the App Store" />
         </a>
-        <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.sokin.meditation" target="_blank" rel="noopener">
-          <span class="platform">Google Play</span>
-          <span class="name">Android</span>
+        <a class="store-badge-img" href="https://play.google.com/store/apps/details?id=com.sokin.meditation" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+          <img src="download/google.png" alt="Get it on Google Play" />
         </a>
       </div>
     </section>
